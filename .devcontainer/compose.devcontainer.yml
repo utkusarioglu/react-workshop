@@ -6,17 +6,17 @@ services:
     volumes:
       - type: volume
         source: vscode-extensions
-        target: /home/rn/.vscode-server/extensions
+        target: /home/dev/.vscode-server/extensions
       - type: volume
         source: vscode-extensions-insiders
-        target: /home/rn/.vscode-server-insiders/extensions
+        target: /home/dev/.vscode-server-insiders/extensions
 
       - type: volume
         source: ccache
         target: /ccache
       - type: volume
         source: gradle
-        target: /home/rn/.gradle
+        target: /home/dev/.gradle
       - type: volume
         source: android
         target: /opt/android

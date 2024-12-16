@@ -21,7 +21,8 @@
         "esbenp.prettier-vscode",
         "ms-azuretools.vscode-docker",
         "vscjava.vscode-gradle",
-        "formulahendry.auto-rename-tag"
+        "formulahendry.auto-rename-tag",
+        "arcanis.vscode-zipfs"
       ]
     }
   }

@@ -1,0 +1,11 @@
+{
+  "name": "@react-workshop/root",
+  "packageManager": "yarn@4.5.3",
+  "workspaces": [
+    "src/targets/*",
+    "src/packages/*"
+  ],
+  "devDependencies": {
+    "turbo": "^2.3.3"
+  }
+}
