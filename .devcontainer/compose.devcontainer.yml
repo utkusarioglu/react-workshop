@@ -1,0 +1,34 @@
+services:
+  react-workshop:
+    stdin_open: true
+    environment:
+      GH_TOKEN: ${GH_TOKEN}
+    volumes:
+      - type: volume
+        source: vscode-extensions
+        target: /home/rn/.vscode-server/extensions
+      - type: volume
+        source: vscode-extensions-insiders
+        target: /home/rn/.vscode-server-insiders/extensions
+
+      - type: volume
+        source: ccache
+        target: /ccache
+      - type: volume
+        source: gradle
+        target: /home/rn/.gradle
+      - type: volume
+        source: android
+        target: /opt/android
+
+volumes:
+  vscode-extensions:
+    name: react-workshop-vscode-extensions
+  vscode-extensions-insiders:
+    name: react-workshop-vscode-extensions-insiders
+  ccache:
+    name: react-workshop-ccache
+  gradle:
+    name: react-workshop-gradle
+  android:
+    name: react-workshop-android

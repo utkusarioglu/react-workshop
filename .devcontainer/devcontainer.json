@@ -1,0 +1,28 @@
+{
+  "name": "utkusarioglu.react-workshop",
+  "dockerComposeFile": [
+    "compose.devcontainer.yml",
+    "../.docker/compose.dev.yml"
+  ],
+  "service": "react-workshop",
+  "workspaceFolder": "/utkusarioglu/react-workshop",
+  "postCreateCommand": "scripts/post-create-command.sh",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "workbench.colorCustomizations": {
+          "activityBar.background": "#4e208a",
+          "activityBar.foreground": "#FFF"
+        }
+      },
+      "extensions": [
+        "msjsdiag.vscode-react-native",
+        "vscjava.vscode-java-pack",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "vscjava.vscode-gradle",
+        "formulahendry.auto-rename-tag"
+      ]
+    }
+  }
+}

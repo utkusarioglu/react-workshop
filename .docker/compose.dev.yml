@@ -1,0 +1,15 @@
+services:
+  react-workshop:
+    container_name: react-workshop
+    image: utkusarioglu/react-native-android-devcontainer:35-23-ubuntu-test-17
+    environment:
+      PROJECT_ROOT_ABSPATH: /utkusarioglu/react-workshop
+      ANDROID_TARGET_DEVICE: 192.168.1.151:58526
+    volumes:
+      - type: bind
+        source: ..
+        target: /utkusarioglu/react-workshop
+    ports:
+      - 443:443
+      - 3000:3000
+      - 5000:5000
