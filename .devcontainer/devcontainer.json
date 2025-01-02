@@ -16,6 +16,7 @@
         }
       },
       "extensions": [
+        "vscode.typescript-language-features",
         "msjsdiag.vscode-react-native",
         "vscjava.vscode-java-pack",
         "esbenp.prettier-vscode",
