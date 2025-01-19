@@ -3,6 +3,7 @@
   "packageManager": "yarn@4.5.3",
   "scripts": {
     "dev": "node --watch src/* -r ts-node src/index.mts",
+    "watch": "yarn tsc --watch",
     "build": "yarn tsc",
     "run": "node build/index.mjs"
   },

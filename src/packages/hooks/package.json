@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "name": "@react-workshop/hooks",
+  "packageManager": "yarn@4.5.3",
+  "types": "types",
+  "type": "module",
+  "scripts": {
+    "build": "yarn tsc",
+    "watch": "yarn tsc --watch"
+  },
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "types": "./types/index.d.mts"
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.3",
+    "typescript": "^5.7.2"
+  }
+}

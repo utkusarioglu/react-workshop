@@ -23,7 +23,10 @@
         "ms-azuretools.vscode-docker",
         "vscjava.vscode-gradle",
         "formulahendry.auto-rename-tag",
-        "arcanis.vscode-zipfs"
+        "arcanis.vscode-zipfs",
+        "dbaeumer.vscode-eslint",
+        "inferrinizzard.prettier-sql-vscode",
+        "mtxr.sqltools-driver-pg"
       ]
     }
   }

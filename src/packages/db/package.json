@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "@react-workshop/db",
+  "packageManager": "yarn@4.5.3",
+  "scripts": {
+    "build": "yarn tsc",
+    "watch": "echo WATCHING && yarn tsc --watch"
+  },
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "types": "./lib/index.d.mts"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "@types/pg": "^8",
+    "@types/pg-format": "^1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.4.0",
+    "@react-workshop/decorators": "workspace:^",
+    "pg": "^8.13.1",
+    "pg-format": "^1.0.4"
+  }
+}

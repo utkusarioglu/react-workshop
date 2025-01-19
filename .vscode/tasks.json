@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Dev",
+      "detail": "Run dev mode for selected target",
+      "command": "yarn",
+      "args": ["turbo", "run", "watch", "${input:target}#dev"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": false
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "target",
+      "type": "pickString",
+      "description": "Select target",
+      "options": ["@react-workshop/next", "@react-workshop/spa"]
+    }
+  ]
+}

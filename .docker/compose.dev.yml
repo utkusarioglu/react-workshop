@@ -1,7 +1,7 @@
 services:
   react-workshop:
     container_name: react-workshop
-    image: utkusarioglu/react-native-android-devcontainer:35-23-ubuntu-test-17
+    image: utkusarioglu/react-native-android-devcontainer:35-23-ubuntu-test-18
     environment:
       PROJECT_ROOT_ABSPATH: /utkusarioglu/react-workshop
       ANDROID_TARGET_DEVICE: 192.168.1.151:58526
@@ -13,3 +13,14 @@ services:
       - 443:443
       - 3000:3000
       - 5000:5000
+  postgres:
+    container_name: react-workshop-postgres
+    image: postgres:17.2
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: cat
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - type: bind
+        source: ../postgres-data
+        target: /var/lib/postgresql/data

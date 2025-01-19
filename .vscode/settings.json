@@ -4,7 +4,20 @@
     "**/.pnp.*": true
   },
   "eslint.nodePath": ".yarn/sdks",
+  "eslint.workingDirectories": [{ "mode": "auto" }],
   "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "react-workshop-postgres",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "Postgres",
+      "database": "postgres",
+      "username": "postgres",
+      "password": "cat"
+    }
+  ]
 }

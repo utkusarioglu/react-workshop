@@ -1,0 +1,16 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "baseUrl": ".",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+    "outDir": "lib",
+    "emitDeclarationOnly": false,
+    "declarationMap": true,
+    "declarationDir": "types",
+    "composite": true
+  },
+  "include": ["./src/*"]
+}
