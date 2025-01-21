@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.image {
+  width: var(--size-px);
+  height: var(--size-px);
+  border-radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .image {
+    background-color: rgb(var(--color-bg-2-light-rgb));
+  }
+
+  .container {
+    background-color: rgb(var(--color-bg-3-light-rgb));
+    color: rgb(var(--color-text-1-light-rgb));
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .image {
+    background-color: rgb(var(--color-bg-2-dark-rgb));
+  }
+
+  .container {
+    background-color: rgb(var(--color-bg-3-dark-rgb));
+    color: rgb(var(--color-text-1-dark-rgb));
+  }
+}

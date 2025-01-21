@@ -1,0 +1,10 @@
+.title {
+  display: none;
+  margin-top: 0;
+}
+
+@media (min-width: 800px) {
+  .title {
+    display: block;
+  }
+}

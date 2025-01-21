@@ -4,7 +4,7 @@
   "packageManager": "yarn@4.5.3",
   "scripts": {
     "build": "yarn tsc",
-    "watch": "echo WATCHING && yarn tsc --watch"
+    "watch": "yarn tsc --watch"
   },
   "exports": {
     ".": {

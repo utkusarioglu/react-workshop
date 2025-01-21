@@ -1,0 +1,20 @@
+.container {
+  padding-top: var(--header-y);
+  padding-bottom: var(--footer-y);
+  padding-inline: var(--s-2);
+  min-height: 100lvh;
+}
+
+@media (prefers-color-scheme: light) {
+  .container {
+    background-color: rgb(var(--color-bg-1-light-rgb));
+    color: rgb(var(--color-text-1-light-rgb));
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: rgb(var(--color-bg-1-dark-rgb));
+    color: rgb(var(--color-text-1-dark-rgb));
+  }
+}

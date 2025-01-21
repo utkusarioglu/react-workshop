@@ -1,0 +1,21 @@
+:root {
+  --color-text-1-dark-rgb: 240, 240, 240;
+  --color-text-2-dark-rgb: 200, 200, 200;
+
+  --color-bg-1-dark-rgb: 15, 15, 15;
+  --color-bg-2-dark-rgb: 40, 40, 40;
+  --color-bg-3-dark-rgb: 50, 50, 50;
+
+  --color-text-1-light-rgb: 10, 10, 10;
+  --color-text-2-light-rgb: 30, 30, 30;
+
+  --color-bg-1-light-rgb: 255, 255, 255;
+  --color-bg-2-light-rgb: 220, 220, 220;
+  --color-bg-3-light-rgb: 200, 200, 200;
+
+  --s-1: 0.5em;
+  --s-2: 1em;
+
+  --header-y: 5rem;
+  --footer-y: 5rem;
+}
