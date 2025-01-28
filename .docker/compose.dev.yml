@@ -1,7 +1,7 @@
 services:
   react-workshop:
     container_name: react-workshop
-    image: utkusarioglu/react-native-android-devcontainer:35-23-ubuntu-test-18
+    image: utkusarioglu/react-native-android-devcontainer:35-23-ubuntu-test-22
     environment:
       PROJECT_ROOT_ABSPATH: /utkusarioglu/react-workshop
       ANDROID_TARGET_DEVICE: 192.168.1.151:58526

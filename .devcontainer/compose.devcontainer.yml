@@ -21,6 +21,9 @@ services:
         source: android
         target: /opt/android
 
+  postgres:
+    init: true
+
 volumes:
   vscode-extensions:
     name: react-workshop-vscode-extensions

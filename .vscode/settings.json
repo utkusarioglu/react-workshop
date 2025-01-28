@@ -15,7 +15,7 @@
       "port": 5432,
       "driver": "PostgreSQL",
       "name": "Postgres",
-      "database": "postgres",
+      "database": "music",
       "username": "postgres",
       "password": "cat"
     }
