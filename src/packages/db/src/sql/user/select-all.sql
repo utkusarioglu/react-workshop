@@ -1,0 +1,9 @@
+SELECT
+  id,
+  username,
+  email,
+  first_name,
+  last_name,
+  creation_date 
+FROM 
+  "user";

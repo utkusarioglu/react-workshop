@@ -2,6 +2,8 @@ import path from "node:path";
 import fs from "node:fs";
 import format from "pg-format";
 
+const BASE_PATH = "/utkusarioglu/react-workshop/src/packages/db/src/sql";
+
 export class SqlQueryLibrary {
   namespace: string;
   namespacePath: string;
@@ -11,11 +13,11 @@ export class SqlQueryLibrary {
     this.namespace = namespace;
     this.namespacePath = this.namespace;
 
-    const files = fs.readdirSync(this.namespacePath);
+    const namespacePath = path.join(BASE_PATH, this.namespacePath);
+    const files = fs.readdirSync(namespacePath);
     files.forEach((filename) => {
-      this.queries[filename.split(".")[0]] = String(
-        fs.readFileSync(path.join(this.namespacePath, filename)),
-      );
+      const filePath = path.join(namespacePath, filename);
+      this.queries[filename.split(".")[0]] = String(fs.readFileSync(filePath));
     });
   }
 

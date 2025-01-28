@@ -10,6 +10,10 @@ const LINKS = [
     title: "Playing",
     href: "/playing",
   },
+  {
+    title: "Users",
+    href: "/users",
+  },
 ];
 
 export const Nav = () => (

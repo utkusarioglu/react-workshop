@@ -6,7 +6,7 @@ export const pool = new Pool({
   password: "cat",
   host: "react-workshop-postgres",
   port: 5432,
-  database: "postgres",
+  database: "music",
 });
 
 export async function withPool<T>(cb: (client: PoolClient) => Promise<T>) {
