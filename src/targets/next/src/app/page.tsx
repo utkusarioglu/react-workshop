@@ -1,28 +1,51 @@
-import { getRecents } from "@/actions/recents.action";
-import { Recent } from "@/components/recent/Recent";
-import { RecentSkeleton } from "@/components/recent/Recent.skeleton";
-import { Greeting } from "@/components/greeting/Greeting";
-import { Suspense } from "react";
+"use client";
+
+import { useImperativeHandle, useRef } from "react";
+import type { RefObject } from "react";
+import "./style.css";
+
+interface WithScrollOffset {
+  scrollOffset: (offset: number) => void;
+}
+
+function useScrollOffset<T extends HTMLElement | null>(rawRef: RefObject<T>) {
+  type WithMethod = T & WithScrollOffset;
+  type Enhanced = RefObject<WithMethod>;
+
+  const attach = useRef<T>(null);
+
+  const ref = rawRef as Enhanced;
+  useImperativeHandle(
+    ref,
+    () =>
+      ({
+        scrollOffset: (offset) => {
+          const dims = attach.current!.getBoundingClientRect();
+          const top = dims.top + window.scrollY + offset;
+          window.scrollTo({
+            top,
+            behavior: "smooth",
+          });
+        },
+      }) as WithMethod,
+    [],
+  );
+
+  return {
+    ref,
+    attach,
+  };
+}
 
 export default () => {
-  const r = getRecents();
+  const { ref, attach } = useScrollOffset(useRef<HTMLHeadingElement>(null));
 
   return (
-    <div>
-      <Greeting />
-      <Suspense fallback={<RecentSkeleton />}>
-        <Recent recents={r} />
-      </Suspense>
-
-      <hr />
-
-      <ol>
-        {Array(100)
-          .fill(null)
-          .map((_, i) => (
-            <li key={i}>{i}</li>
-          ))}
-      </ol>
-    </div>
+    <>
+      <button onClick={() => ref.current.scrollOffset(-100)}>Go</button>
+      <div />
+      <h1 ref={attach}>Target</h1>
+      <div />
+    </>
   );
 };

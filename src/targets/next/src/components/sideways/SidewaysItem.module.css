@@ -1,0 +1,63 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+  width: 100vw;
+  height: calc(100vw - 2 * var(--s-2));
+}
+
+.album {
+  border-radius: var(--s-2);
+}
+
+.artist {
+  border-radius: 100%;
+}
+
+.playlist {
+  border-radius: 0;
+}
+
+.artworkContainer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-inline: var(--s-2);
+}
+
+.artwork {
+  box-sizing: border-box;
+  transition-property: scale;
+  transition-duration: 0.3s;
+  width: 100%;
+  height: 100%;
+}
+
+.hGroup {
+  position: absolute;
+  padding: var(--s-2);
+  text-align: center;
+  left: 0;
+  right: 0;
+
+  & > h3 {
+    font-weight: 700;
+  }
+
+  & > h3,
+  & > h4 {
+    margin: 0;
+    text-shadow:
+      0px 0px 3px black,
+      0px 0px 5px black,
+      0px 0px 7px black;
+  }
+}
+
+.hGroupTop {
+  top: 0;
+}
+
+.hGroupBottom {
+  bottom: 0;
+}

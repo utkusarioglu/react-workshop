@@ -1,0 +1,4 @@
+.headerSnapTarget {
+  scroll-snap-align: start;
+  scroll-margin-block-start: var(--header-y);
+}

@@ -13,9 +13,17 @@
   --color-bg-2-light-rgb: 220, 220, 220;
   --color-bg-3-light-rgb: 200, 200, 200;
 
-  --s-1: 0.5em;
-  --s-2: 1em;
+  --color-accent-1-dark-rgb: 33, 160, 244;
+
+  --s-1: 0.5rem;
+  --s-2: 1rem;
+  --s-3: 1.5rem;
+  --s-4: 2rem;
+  --s-5: 2.5rem;
+  --s-6: 3rem;
 
   --header-y: 5rem;
-  --footer-y: 5rem;
+  --footer-y: 4rem;
+
+  --scrollbar-main-width: 2px;
 }

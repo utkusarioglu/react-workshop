@@ -1,4 +1,5 @@
 import style from "./Recent.module.css";
+import scroll from "@/style/scroll.module.css";
 import recentCard from "./RecentCard.module.css";
 import { THUMB_SIZE } from "./constants";
 
@@ -16,7 +17,7 @@ const RecentCardSkeleton = () => (
 
 export const RecentSkeleton = () => {
   return (
-    <ol className={[style.ol, style.mask].join(" ")}>
+    <ol className={[style.ol, style.mask, scroll.headerSnapTarget].join(" ")}>
       {Array(8)
         .fill(null)
         .map((_, id) => (

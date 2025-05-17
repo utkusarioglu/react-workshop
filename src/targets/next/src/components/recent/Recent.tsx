@@ -1,5 +1,6 @@
 import Image from "next/image";
 import recentStyles from "./Recent.module.css";
+import scroll from "@/style/scroll.module.css";
 import recentCardStyles from "./RecentCard.module.css";
 import animationStyles from "@/style/fade-in.module.css";
 import { use } from "react";
@@ -32,7 +33,7 @@ interface RecentProps {
 
 export const Recent: FC<RecentProps> = ({ recents }) => {
   return (
-    <ol className={recentStyles.ol}>
+    <ol className={[recentStyles.ol, scroll.headerSnapTarget].join(" ")}>
       {use(recents).map(({ id, title }) => (
         <li key={id}>
           <RecentCard

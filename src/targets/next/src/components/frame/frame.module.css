@@ -7,7 +7,7 @@
   top: var(--top);
   bottom: var(--bottom);
   left: 0;
-  right: 0;
+  right: var(--scrollbar-main-width);
 
   padding: 0.6rem 1rem;
   overflow: hidden;
@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   gap: 1em;
+  z-index: 100;
 }
 
 @media (prefers-color-scheme: light) {
